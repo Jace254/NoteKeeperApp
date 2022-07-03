@@ -1,6 +1,7 @@
 package com.example.notekeeper
 
 import android.os.Bundle
+import android.view.Menu
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.notekeeper.databinding.ActivityMainBinding
@@ -37,5 +38,10 @@ class MainActivity : AppCompatActivity() {
         val coursePosition = DataManager.courses.values.indexOf(note.course)
         binding.content.spinnerCourses.setSelection(coursePosition)
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
     }
 }
