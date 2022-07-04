@@ -16,6 +16,8 @@
         android:gravity="start|top"
         android:hint="@string/note_content"
         android:inputType="textMultiLine"
+        android:textAllCaps="false"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="@+id/spinnerCourses"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/spinnerCourses"

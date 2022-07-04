@@ -26,14 +26,12 @@ class NoteListActivity : AppCompatActivity() {
             val activityIntent = Intent(this, MainActivity::class.java)
             activityIntent.putExtra(NOTE_POSITION,position)
             startActivity(activityIntent)
-
         }
     }
-
-
-
+    //when the NoteListActivity is Resumed and restarted in the activity flow
     override fun onResume() {
         super.onResume()
+        //notify the Activity that the data was changed
         (binding.contentNote.listNotes.adapter as ArrayAdapter<*>).notifyDataSetChanged()
     }
 }
