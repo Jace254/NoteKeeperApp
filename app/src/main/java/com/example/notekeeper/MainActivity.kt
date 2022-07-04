@@ -2,6 +2,7 @@ package com.example.notekeeper
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.notekeeper.databinding.ActivityMainBinding
@@ -44,4 +45,31 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_next -> {
+                MoveNext()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun MoveNext(){
+        ++notePosition
+        displayNote()
+        invalidateOptionsMenu()
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu): Boolean {
+        if (notePosition == DataManager.notes.lastIndex){
+            val menuItem = menu.findItem(R.id.action_next)
+            menuItem.icon = getDrawable(R.drawable.ic_baseline_block_24)
+            menuItem.isEnabled = false
+        }
+
+        return super.onPrepareOptionsMenu(menu)
+    }
+
 }

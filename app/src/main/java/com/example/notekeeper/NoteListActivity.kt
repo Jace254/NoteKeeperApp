@@ -19,7 +19,7 @@ class NoteListActivity : AppCompatActivity() {
             startActivity(activityIntent)
         }
 
-        binding.contentNote.listNotes.adapter = ArrayAdapter<NoteInfo>(this,
+        binding.contentNote.listNotes.adapter = ArrayAdapter(this,
                                                 android.R.layout.simple_list_item_1,
                                                 DataManager.notes)
         binding.contentNote.listNotes.setOnItemClickListener{parent,view, position, id ->
