@@ -19,14 +19,21 @@ class NoteListActivity : AppCompatActivity() {
             startActivity(activityIntent)
         }
 
-        binding.contentNote.listNotes.adapter = ArrayAdapter(this,
+        binding.contentNote.listNotes.adapter = ArrayAdapter<NoteInfo>(this,
                                                 android.R.layout.simple_list_item_1,
                                                 DataManager.notes)
         binding.contentNote.listNotes.setOnItemClickListener{parent,view, position, id ->
             val activityIntent = Intent(this, MainActivity::class.java)
-            activityIntent.putExtra(EXTRA_NOTE_POSITION,position)
+            activityIntent.putExtra(NOTE_POSITION,position)
             startActivity(activityIntent)
 
         }
+    }
+
+
+
+    override fun onResume() {
+        super.onResume()
+        (binding.contentNote.listNotes.adapter as ArrayAdapter<*>).notifyDataSetChanged()
     }
 }

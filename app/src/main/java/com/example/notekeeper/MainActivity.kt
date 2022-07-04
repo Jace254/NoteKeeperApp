@@ -24,11 +24,21 @@ class MainActivity : AppCompatActivity() {
 
         binding.content.spinnerCourses.adapter = adapterSpinner
 
-        notePosition = intent.getIntExtra(EXTRA_NOTE_POSITION, POSITION_NOT_SET)
+        notePosition = savedInstanceState?.getInt(NOTE_POSITION, POSITION_NOT_SET) ?:
+            intent.getIntExtra(NOTE_POSITION, POSITION_NOT_SET)
 
         if(notePosition != POSITION_NOT_SET){
             displayNote()
+        } else {
+            DataManager.notes.add(NoteInfo())
+            notePosition = DataManager.notes.lastIndex
         }
+
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(NOTE_POSITION, POSITION_NOT_SET)
     }
 
     private fun displayNote() {
@@ -70,6 +80,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onPrepareOptionsMenu(menu)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        saveNote()
+    }
+
+    private fun saveNote() {
+        val note = DataManager.notes[notePosition]
+        note.title = binding.content.textNoteTitle.text.toString()
+        note.text = binding.content.textNoteContent.text.toString()
+        note.course = binding.content.spinnerCourses.selectedItem as CourseInfo
     }
 
 }
