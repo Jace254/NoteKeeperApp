@@ -4,18 +4,19 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notekeeper.databinding.ActivityItemsBinding
-import com.google.android.material.navigation.NavigationView
 
 class ItemsActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityItemsBinding
     private lateinit var listItems: RecyclerView
+    private lateinit var drawerLayout: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,10 +29,10 @@ class ItemsActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24)
 
-        binding.appBarItems.fab.setOnClickListener { view ->
+        binding.appBarItems.fab.setOnClickListener {
             startActivity(Intent(this,NoteActivity::class.java))
         }
-        val drawerLayout: DrawerLayout = binding.drawerLayout
+        drawerLayout = binding.drawerLayout
 
         listItems = binding.appBarItems.content.listItems
 
@@ -41,7 +42,7 @@ class ItemsActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_courses, R.id.nav_notes
             ), drawerLayout
         )
 
@@ -58,8 +59,15 @@ class ItemsActivity : AppCompatActivity() {
     }
 
     private fun openNav() {
-        val navView: NavigationView = binding.navView
-        navView.display
+        drawerLayout.openDrawer(GravityCompat.START)
+    }
+
+    override fun onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START)//close drawer
+        } else {
+            super.onBackPressed()//close app
+        }
     }
 
     override fun onResume() {
