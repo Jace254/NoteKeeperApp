@@ -22,7 +22,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/spinnerCourses"
         app:layout_constraintTop_toBottomOf="@+id/textNoteTitle"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        tools:text="lorem ipsum dolor imet lorem ipsum dolor imet content" />
 
     <Spinner
         android:id="@+id/spinnerCourses"
@@ -52,5 +53,6 @@
         app:layout_constraintEnd_toEndOf="@+id/spinnerCourses"
         app:layout_constraintStart_toStartOf="@+id/spinnerCourses"
         app:layout_constraintTop_toBottomOf="@+id/spinnerCourses"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        tools:text="Title" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,12 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2775" />
         <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.1" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/drawable/ic_baseline_assignment_24.xml" value="0.1" />
         <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/drawable/ic_baseline_block_24.xml" value="0.1555" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/drawable/ic_baseline_keyboard_return_24.xml" value="0.1" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/font-v28/course_title.xml" value="0.1" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/font/course_title.xml" value="0.1" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/activity_items.xml" value="0.13272543059777103" />
         <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/activity_note_list.xml" value="0.12" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/activity_note_list.xml" value="0.22" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/app_bar_items.xml" value="0.25" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/content_items.xml" value="0.2" />
         <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/content_main.xml" value="0.25" />
-        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/content_note_list.xml" value="0.25" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/content_note_list.xml" value="0.33" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/fragment_gallery.xml" value="0.13272543059777103" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/fragment_home.xml" value="0.13272543059777103" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/item_note_list.xml" value="0.22" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/layout/nav_header_items.xml" value="0.1082427536231884" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/menu/activity_main_drawer.xml" value="0.26871794871794874" />
+        <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/menu/items.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/Joash/AndroidStudioProjects/NoteKeeper/app/src/main/res/menu/menu_main.xml" value="0.25" />
       </map>
     </option>
