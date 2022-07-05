@@ -16,7 +16,6 @@
         <activity
             android:name=".ItemsActivity"
             android:exported="true"
-            android:label="@string/title_activity_note_list"
             android:theme="@style/Theme.NoteKeeper.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,13 +25,12 @@
         </activity>
         <activity
             android:name=".NoteListActivity"
-            android:exported="true"
-            android:label="@string/title_activity_note_list">
+            android:exported="true">
         </activity>
         <activity
             android:name=".NoteActivity"
             android:exported="true"
-            android:label="Edit Note"></activity>
+            android:label="Edit Note" />
 
     </application>
 

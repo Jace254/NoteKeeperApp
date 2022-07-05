@@ -2,7 +2,6 @@
     <string name="app_name">NoteKeeper</string>
     <string name="note_title">Note title</string>
     <string name="note_content">Note Content</string>
-    <string name="title_activity_note_list">NoteKeeper</string>
     <string name="todo">TODO</string>
     <string name="save">save</string>
     <string name="next">Next</string>
@@ -22,4 +21,6 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="add_note">add</string>
+    <string name="notes">Notes</string>
+    <string name="courses">Courses</string>
 </resources>
