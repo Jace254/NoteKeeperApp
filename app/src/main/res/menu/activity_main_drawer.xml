@@ -7,12 +7,12 @@
         android:checkableBehavior="single"
         android:visible="true">
         <item
-            android:id="@+id/nav_courses"
-            android:icon="@drawable/ic_baseline_courses_24"
-            android:title="@string/courses" />
-        <item
             android:id="@+id/nav_notes"
             android:icon="@drawable/ic_baseline_notes_24"
             android:title="@string/notes" />
+        <item
+            android:id="@+id/nav_courses"
+            android:icon="@drawable/ic_baseline_courses_24"
+            android:title="@string/courses" />
     </group>
 </menu>

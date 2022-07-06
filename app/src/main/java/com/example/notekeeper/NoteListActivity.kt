@@ -17,7 +17,7 @@ class NoteListActivity : AppCompatActivity() {
         setContentView(binding.root)
         listItems = binding.contentNote.listItems
 
-        binding.fab.setOnClickListener{ view ->
+        binding.fab.setOnClickListener{
             val activityIntent = Intent(this, NoteActivity::class.java)
             startActivity(activityIntent)
         }
